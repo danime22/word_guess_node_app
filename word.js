@@ -1,12 +1,12 @@
 var letter = require("./letter");
 
 // constructor function
-function Word(word) {
+function Word(w) {
     this.letters = [];
 
     // loop that turns word into an array of letters
-    for (let i = 0; i < word.length; i++) {
-        var a = new letter(word.charAt(i));
+    for (let i = 0; i < w.length; i++) {
+        var a = new letter(w.charAt(i));
         this.letters.push(a);
     }
 
@@ -26,8 +26,8 @@ function Word(word) {
     };
     
     this.wordGuessedCorrectly = function(){
-        for(let i = 0; i = this.letters.length; i++){
-            if(!this.letters[i].alreadyGuessed){
+        for(let i = 0; i < this.letters.length; i++){
+            if(!this.letters[i].wasGuessed()){
                 return false;
             }
         }
@@ -35,7 +35,7 @@ function Word(word) {
     }
 }
 
-
+module.exports = Word;
 
 
 

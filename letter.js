@@ -1,10 +1,21 @@
 function Letter(letter) {
-    this.letter = letter;
+    this.letter = letter.toUpperCase();
+    if(letter === " "){
+        this.alreadyGuessed = true;
+    } else{
+        this.alreadyGuessed = false;
+    }
+   
 
-    this.alreadyGuessed = false;
+    this.wasGuessed = function() {
+        return this.alreadyGuessed;
+    }
 
     //function that display character
     this.toString = function () {
+        if(this.letter == " "){
+            return " ";
+        }
         if (this.alreadyGuessed) {
             return this.letter;
         } else {
@@ -24,11 +35,6 @@ function Letter(letter) {
 }
 
 
-module.exports = Letter
+module.exports = Letter;
 
-// var boo = new Letter("a");
-// console.log(boo.checkLetter("q"));
-// console.log(boo.getDisplayLetter());
-// console.log(boo.checkLetter("a"));
-// console.log(boo.getDisplayLetter());
 
