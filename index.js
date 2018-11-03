@@ -4,15 +4,20 @@ var color = require("colors");
 
 
 var boardGames = [
-    // "Mysterium",
-    // "Takenoko",
-  "Love Letter",
-    // "Dominion"
+    "Mysterium",
+    "Takenoko",
+    "Love Letter",
+    "Dominion",
+    "Gizmo",
+    "Secret Hitler",
+    "Lost Cities",
+    "Carcassonne",
+    "Race for the Galaxy"
 ];
 
 var gameState = {
     currentboardGame: null,
-    letterGuessed:  "",
+    letterGuessed: "",
     remainingIncorrect: 6
 
 };
